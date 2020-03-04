@@ -1,0 +1,16 @@
+PODS:
+  - irTest (0.1.0)
+
+DEPENDENCIES:
+  - irTest (from `../`)
+
+EXTERNAL SOURCES:
+  irTest:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  irTest: 988757bf5c8124923106979e16c00f7f8ecc07c1
+
+PODFILE CHECKSUM: 4afd1ec18bdab5f1549dbe51f147fadb009489d9
+
+COCOAPODS: 1.8.4
