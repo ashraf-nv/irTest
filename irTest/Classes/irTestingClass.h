@@ -9,4 +9,7 @@
 
 @interface irTestingClass : NSObject
 
++(instancetype _Nullable )sharedInstance;
+-(void)testIRPodFunction;
+
 @end
