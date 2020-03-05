@@ -27,21 +27,10 @@ Pod::Spec.new do |s|
   s.author           = { 'ashraf-nv' => 'ashraf@notifyvisitors.com' }
   s.source           = { :git => 'https://github.com/ashraf-nv/irTest.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.platform = :ios
-
   s.source_files = 'irTest/Classes/**/*'
   s.frameworks = 'Foundation', 'UIKit', 'Security', 'Social', 'MessageUI'
-# s.resource = 'irTest/Assets/fb.png'
-  s.resources = "irTest/Assets/**/*.{png,jpg,plist}"
-#  s.ios.vendored_library = 'irTest/Classes/**/*.a'
+  s.resources = "irTest/Assets/**/*.{png,jpg}"
   s.vendored_library = 'irTest/Classes/libinvitereferrals_4_3_1.a'
-  # s.resource_bundles = {
-  #   'irTest' => ['irTest/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-#    s.vendored_library = 'invitereferrals_4_3_1.a'
+  
 end
