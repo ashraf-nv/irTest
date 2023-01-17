@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'irTest'
-  s.version          = '0.3.0'
+  s.version          = '5.0.1'
   s.summary          = 'this is my first cocoapods lib for testing my lib'
 
 # This description is used to generate tags and improve search results.
@@ -29,19 +29,13 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :ios
-
-  s.source_files = 'irTest/Classes/**/*'
+  s.ios.deployment_target = '9.0'
+  s.source_files = 'irTest/Classes/**/*.h'
+  s.resources = ['irTest/Assets/**/*.png', 'irTest/Classes/IR_UserResources.plist']
   s.frameworks = 'Foundation', 'UIKit', 'Security', 'Social', 'MessageUI'
-# s.resource = 'irTest/Assets/fb.png'
-  s.resources = "irTest/Assets/**/*.{png,jpg,plist}"
-#  s.ios.vendored_library = 'irTest/Classes/**/*.a'
-  s.vendored_library = 'irTest/Classes/libinvitereferrals_4_3_1.a'
-  # s.resource_bundles = {
-  #   'irTest' => ['irTest/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-#    s.vendored_library = 'invitereferrals_4_3_1.a'
+  s.vendored_library = 'irTest/Classes/**/*.a'
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end
